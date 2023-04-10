@@ -1,0 +1,69 @@
+@import './styles/colors';
+@import './styles/mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-black;
+  font-family: 'Poetsen One', sans-serif;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__view {
+    max-width: 100%;
+    height: 78.3%;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__step-count {
+    font-size: toEm(16);
+    line-height: calc(19/16);
+    color: $color-yellow;
+  }
+
+  &__controll-block {
+    width: 100%;
+    max-width: 500px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: toEm(20) toEm(30) toEm(42);
+  }
+
+  &__controll-part {
+    min-width: 73px;
+
+    &--is-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+
+      & button:first-child {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__controll-button-wrapper {
+    position: relative;
+    z-index: 2;
+  }
+}

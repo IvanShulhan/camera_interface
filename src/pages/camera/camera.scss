@@ -1,0 +1,42 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.camera {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__view {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;  
+  }
+
+  &__text {
+    @include flex-center();
+    font-weight: 400;
+    text-align: center;
+    font-size: toRem(16);
+    line-height: #{calc( 19 / 16 )}em;
+    padding: toEm(15);
+    background-color: $color-yellow;
+    border-radius: toEm(32);
+    @include border-dash();
+    width: 66.6%;
+    position: absolute;
+    bottom: 7.7%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-black;
+  }
+
+  &__border {
+    position: absolute;
+    width: 32.8%;
+    height: 29.9%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

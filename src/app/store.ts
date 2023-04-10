@@ -1,7 +1,11 @@
+/* eslint-disable import/no-cycle */
 import { configureStore } from '@reduxjs/toolkit';
+
+import photosSlice from '../features/photosSlice';
 
 export const store = configureStore({
   reducer: {
+    photos: photosSlice,
   },
 });
 

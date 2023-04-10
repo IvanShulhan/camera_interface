@@ -1,0 +1,29 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.button {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  background-color: $color-yellow;
+  @include flex-center();
+  border: none;
+  outline: none;
+  border-radius: 50%;
+
+  &--is-medium {
+    width: 64px;
+    height: 64px;
+  }
+
+  &--is-large {
+    width: 96px;
+    height: 96px;
+  }
+
+  & img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+}
