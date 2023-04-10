@@ -1,6 +1,7 @@
 {
   "name": "camera_interface",
   "private": true,
+  "homepage": "https://ivanShulhan.github.io/camera_interface",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
